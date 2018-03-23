@@ -3,7 +3,7 @@ version: 2
 # Default configurations
 terraform: &terraform
   docker:
-    - image: rsridivya/terraform
+    - image: rsridivya/terraform:latest
   working_directory: /tmp/workspace
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
           command: terraform init -input=false
       - run:
           name: terraform plan
-          command: terraform plan -input=false -out=tfplan
+          command: terraform plan -input=false -out=tfplan 
       - persist_to_workspace:
           root: .
           paths:
