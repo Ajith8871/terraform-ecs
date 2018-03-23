@@ -3,7 +3,7 @@ version: 2
 # Default configurations
 terraform: &terraform
   docker:
-    - image: rsridivya/terraform
+    - image: rsridivya/terraform:latest
   working_directory: /tmp/workspace
 
 jobs:
