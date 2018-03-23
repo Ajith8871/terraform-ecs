@@ -28,10 +28,7 @@ jobs:
           command: terraform init -input=false
       - run:
           name: terraform plan
-          command: terraform plan -input=false -out=tfplan
-      - run:
-          name: show plan
-          command: cat tfplan   
+          command: terraform plan -input=false -out=tfplan 
       - persist_to_workspace:
           root: .
           paths:
